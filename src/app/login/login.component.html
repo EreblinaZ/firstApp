@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <!----------------------- Main Container -------------------------->
+
+    <div class="container-fluid d-flex min-vh-100">
+      <!----------------------- Login Container -------------------------->
+
+      <div
+        class="row box-area"
+        style="background: #e0e0e0; margin: 0; padding: 0"
+      >
+        <!--------------------------- Left Box ----------------------------->
+        <div
+          class="col-md-6 d-flex justify-content-center align-items-center flex-column left-box"
+          style="background: rgb(255, 255, 255)"
+        >
+          <div class="featured-image mb-3">
+            <img
+              src="/assets/images/login-foto.PNG"
+              class="img-fluid"
+              style="width: 400px"
+            />
+          </div>
+        </div>
+
+        <!-------------------- ------ Right Box ---------------------------->
+        <div class="col-md-6 right-box">
+          <div class="row align-items-center">
+            <div class="header-text mb-4">
+              <h2>User Login</h2>
+            </div>
+
+            <div class="input-group mb-3">
+              <input
+                type="email"
+                class="form-outline w-75 form-control-sm bg-light fs-6"
+                placeholder="Email"
+                id="email"
+                [(ngModel)]="email"
+                name="email"
+              />
+            </div>
+
+            <div class="input-group mb-1">
+              <input
+                type="password"
+                class="form-outline w-75 form-control-sm bg-light fs-6"
+                placeholder="Password"
+                id="password"
+                [(ngModel)]="password"
+                name="password"
+              />
+            </div>
+
+            <div class="input-group mb-3 justify-content-betweens">
+              <div class="forgot">
+                <small><a href="#">Forgot Password</a></small>
+              </div>
+            </div>
+
+            <div class="input-group mb-3">
+              <button
+                (click)="login()"
+                class="btn btn-lg btn-light w-75 fs-6"
+                style="height: 34px"
+              >
+                Login
+              </button>
+            </div>
+
+            <div class="row">
+              <small style="font-weight: bold; text-align: center"
+                >Don't have account? <a href="#">Sign Up</a></small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

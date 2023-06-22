@@ -1,0 +1,37 @@
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-3 col-xs-3">
+        <div class="logo">
+          <button type="button">Logo</button>
+        </div>
+      </div>
+
+      <div class="col-md-9 col-sm-9 col-9 text-end">
+        <div
+          class="menu_icon"
+          [class.menu_iconClass]="menu_icon_variable"
+          (click)="openMenu()"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="menu" [class.menuClasse]="menuVariable">
+          <ul>
+            <li><a href="#" routerLink="/home">Home</a></li>
+            <li>
+              <a href="#" style="font-weight: bold" routerLink="/products"
+                >Products</a
+              >
+            </li>
+            <li><a href="#" (click)="logout()">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<p class="text-center mx-auto" style="margin-top: 10px">CRUD!!</p>
