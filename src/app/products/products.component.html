@@ -1,3 +1,15 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+  />
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+    }
+  </style>
+</head>
+
 <header>
   <div class="container">
     <div class="row">
@@ -34,4 +46,43 @@
   </div>
 </header>
 
-<p class="text-center mx-auto" style="margin-top: 10px">CRUD!!</p>
+<p class="text-secondary">Product Form</p>
+
+<div class="addButton">
+  <button (click)="openAddProductDialog()">+ Add</button>
+</div>
+
+<!-- Products Table -->
+<div class="container">
+  <div class="row justify-content-center mt-3">
+    <div class="col-md-8">
+      <table class="table-bordered text-center">
+        <thead class="text-center">
+          <tr class="border-0">
+            <th style="border-left-style: none">Product Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Date</th>
+            <th style="border-right-style: none">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let arr of array">
+            <td>{{ arr.Name }}</td>
+            <td>{{ arr.Category }}</td>
+            <td>{{ arr.Price | number : "1.2-2" }}&euro;</td>
+            <td>{{ arr.Date }}</td>
+            <td>
+              <button class="btn">
+                <span class="material-symbols-outlined"> edit </span>
+              </button>
+              <button class="btn">
+                <span class="material-symbols-outlined"> delete </span>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

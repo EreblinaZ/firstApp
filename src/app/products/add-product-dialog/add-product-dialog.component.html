@@ -1,0 +1,40 @@
+<div mat-dialog-title class="text-center text-muted">Add Product form</div>
+
+<div mat-dialog-content>
+  <!--Product Name-->
+  <mat-form-field appearance="outline">
+    <input matInput type="text" placeholder="Product Name*" />
+  </mat-form-field>
+
+  <br />
+
+  <!--Product Category-->
+  <mat-form-field appearance="outline">
+    <mat-select placeholder="Product Category*">
+      <mat-option *ngFor="let val of category" [value]="val">
+        {{ val }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <br />
+
+  <!--Price-->
+  <mat-form-field appearance="outline">
+    <input matInput type="number" placeholder="Price*" />
+  </mat-form-field>
+
+  <br />
+
+  <!--Date-->
+  <mat-form-field appearance="outline">
+    <input matInput [matDatepicker]="picker" placeholder="Date*" />
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions class="action">
+  <button mat-stroked-button (click)="onCancel()">Cancel</button>
+  <button mat-stroked-button>Save</button>
+</div>

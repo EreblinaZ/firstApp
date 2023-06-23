@@ -11,6 +11,7 @@ header {
   width: 80%;
   color: white;
   padding-bottom: 2%;
+  pointer-events: none;
 }
 .menu {
   margin-top: 0px;

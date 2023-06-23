@@ -11,10 +11,13 @@ header {
   width: 80%;
   padding-bottom: 2%;
   color: white;
+  pointer-events: none;
 }
+
 .menu {
   margin-top: 0px;
 }
+
 .menu ul {
   padding: 0;
   margin: 0;
@@ -31,6 +34,7 @@ header {
   text-decoration: none;
   color: rgb(94, 93, 93);
 }
+
 .menu ul li a:hover {
   cursor: pointer;
   transition: 0.4s ease-in-out;
@@ -45,7 +49,9 @@ header {
     height: 100%;
     background: #e0e0e0;
     transition: 0.4s ease-in-out;
+    z-index: 1;
   }
+
   .menu ul li {
     display: block;
     text-align: left;
@@ -53,11 +59,12 @@ header {
     padding: 10px 0 10px 26px;
     border-bottom: 1px solid #e0e0e0;
   }
+
   .menu_icon {
     display: inline-block;
     position: relative;
     right: 0;
-    top: 20 px;
+    top: 10 px;
   }
 
   .menu_icon span {
@@ -93,4 +100,42 @@ header {
     width: 40%;
     padding-bottom: 1%;
   }
+}
+
+/*
+Product Table
+*/
+p {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 21.5%;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.addButton button {
+  position: relative;
+  background-color: #aeadad;
+  color: white;
+  border: 0px;
+  font-size: medium;
+  margin-left: 72%;
+  margin-top: 20px;
+  width: 15%;
+  height: 32px;
+  cursor: pointer;
+}
+
+table {
+  width: 115%;
+}
+
+th,
+td {
+  width: 100px;
+}
+
+th {
+  font-weight: 400;
+  background-color: #e0e0e0;
 }
