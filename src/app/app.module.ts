@@ -13,13 +13,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { AddProductDialogComponent } from './products/add-product-dialog/add-product-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
-import {MatInputModule}from '@angular/material/input';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import {MatSelectModule} from '@angular/material/select';
-
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [

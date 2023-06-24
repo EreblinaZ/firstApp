@@ -18,15 +18,29 @@ export class AddProductDialogComponent {
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
 
-  onSave(): void {
-    const productData = {
-      Name: this.Name,
-      Category: this.Category,
-      Price: this.Price,
-      Date: this.Date
-    };
+  private validateFields(): boolean {
+    return (
+      this.Name?.trim() !== '' &&
+      this.Category?.trim() !== '' &&
+      this.Price !== null &&
+      !isNaN(this.Price) &&
+      (this.Date instanceof Date)
+    );
+  }
+  
 
-    this.dialogRef.close(productData);
+  onSave(): void {
+    if (this.validateFields()) {
+      const productData = {
+        Name: this.Name,
+        Category: this.Category,
+        Price: this.Price,
+        Date: this.Date,
+      };
+      this.dialogRef.close(productData);
+    } else {
+      window.alert('Please fill in all required fields.');
+    }
   }
 
   onCancel(): void {
