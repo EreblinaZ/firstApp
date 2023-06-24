@@ -43,6 +43,13 @@ export class ProductsComponent {
     });
   }
 
+  deleteProduct(product: any) {
+    const index = this.array.indexOf(product);
+    if (index !== -1) {
+      this.array.splice(index, 1);
+    }
+  }
+
   logout() {
     this.router.navigate(['/login']);
   }
