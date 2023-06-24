@@ -74,7 +74,7 @@
             <td>{{ arr.Date | date : "dd.MM.yyyy" }}</td>
             <td>
               <button class="btn">
-                <span class="material-symbols-outlined"> edit </span>
+                <span class="material-symbols-outlined" (click)="editProduct(arr)"> edit </span>
               </button>
               <button class="btn">
                 <span class="material-symbols-outlined" (click)="deleteProduct(arr)"> delete </span>

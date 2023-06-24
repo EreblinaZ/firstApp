@@ -29,6 +29,7 @@ export class ProductsComponent {
     },
   ];
 
+  //Add Button
   openAddProductDialog() {
     const dialogRef = this._dialog.open(AddProductDialogComponent, {
       height: '450px',
@@ -43,6 +44,27 @@ export class ProductsComponent {
     });
   }
 
+  //Edit Button
+  editProduct(product: any) {
+    const dialogRef = this._dialog.open(AddProductDialogComponent, {
+      height: '450px',
+      width: '500px',
+      data: { mode: 'edit', product: product },
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        const index = this.array.findIndex(
+          (item: any) => item.Name === product.Name
+        );
+        if (index !== -1) {
+          this.array[index] = result;
+        }
+      }
+    });
+  }
+
+  //Delete Button
   deleteProduct(product: any) {
     const index = this.array.indexOf(product);
     if (index !== -1) {
