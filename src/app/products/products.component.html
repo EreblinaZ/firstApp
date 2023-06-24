@@ -70,7 +70,7 @@
           <tr *ngFor="let arr of array">
             <td>{{ arr.Name }}</td>
             <td>{{ arr.Category }}</td>
-            <td>{{ arr.Price | number : "1.2-2" }}&euro;</td>
+            <td>{{ arr.Price | number : "1.2-2" | replaceComma}}&euro;</td>
             <td>{{ arr.Date | date : "dd.MM.yyyy" }}</td>
             <td>
               <button class="btn">
