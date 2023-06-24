@@ -30,9 +30,16 @@ export class ProductsComponent {
   ];
 
   openAddProductDialog() {
-    this._dialog.open(AddProductDialogComponent, {
+    const dialogRef = this._dialog.open(AddProductDialogComponent, {
       height: '450px',
       width: '500px',
+    });
+
+    dialogRef.afterClosed().subscribe((productData: any) => {
+      if (productData) {
+        this.array.push(productData);
+        alert('Product added successfully!');
+      }
     });
   }
 

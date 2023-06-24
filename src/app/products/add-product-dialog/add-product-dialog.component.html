@@ -3,15 +3,15 @@
 <div mat-dialog-content>
   <!--Product Name-->
   <mat-form-field appearance="outline">
-    <input matInput type="text" placeholder="Product Name*" />
+    <input matInput type="text" placeholder="Product Name*" [(ngModel)]="Name" required/>
   </mat-form-field>
 
   <br />
 
   <!--Product Category-->
   <mat-form-field appearance="outline">
-    <mat-select placeholder="Product Category*">
-      <mat-option *ngFor="let val of category" [value]="val">
+    <mat-select placeholder="Product Category*" [(ngModel)]="Category" required>
+      <mat-option *ngFor="let val of categories" [value]="val">
         {{ val }}
       </mat-option>
     </mat-select>
@@ -21,14 +21,14 @@
 
   <!--Price-->
   <mat-form-field appearance="outline">
-    <input matInput type="number" placeholder="Price*" />
+    <input matInput type="number" placeholder="Price*" [(ngModel)]="Price" required/>
   </mat-form-field>
 
   <br />
 
   <!--Date-->
   <mat-form-field appearance="outline">
-    <input matInput [matDatepicker]="picker" placeholder="Date*" />
+    <input matInput [matDatepicker]="picker" placeholder="Date*" [(ngModel)]="Date" required/>
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
@@ -36,5 +36,5 @@
 
 <div mat-dialog-actions class="action">
   <button mat-stroked-button (click)="onCancel()">Cancel</button>
-  <button mat-stroked-button>Save</button>
+  <button mat-stroked-button (click)="onSave()">Save</button>
 </div>

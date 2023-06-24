@@ -71,7 +71,7 @@
             <td>{{ arr.Name }}</td>
             <td>{{ arr.Category }}</td>
             <td>{{ arr.Price | number : "1.2-2" }}&euro;</td>
-            <td>{{ arr.Date }}</td>
+            <td>{{ arr.Date | date : "dd.MM.yyyy" }}</td>
             <td>
               <button class="btn">
                 <span class="material-symbols-outlined"> edit </span>
