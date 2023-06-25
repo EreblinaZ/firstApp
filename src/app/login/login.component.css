@@ -23,7 +23,8 @@ body {
 }
 
 .right-box h2 {
-  font-weight: bold;
+  font-weight:600;
+  font-size: 30px;
   color: gray;
 }
 
@@ -46,13 +47,23 @@ button {
   color: gray;
   cursor: pointer;
 }
+
 .right-box small {
   color: gray;
 }
 
 .forgot a {
-  margin-left: 160px;
   text-decoration: none;
+}
+
+.forgot {
+  text-align: right;
+  margin-right: 25%;
+}
+
+.signup {
+  font-weight: bold;
+  text-align: center;
 }
 /*------------ Custom Placeholder ------------*/
 
@@ -73,4 +84,5 @@ button {
   .right-box {
     padding: 20px;
   }
+
 }

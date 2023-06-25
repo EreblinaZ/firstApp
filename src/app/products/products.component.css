@@ -4,14 +4,15 @@ header {
 }
 
 .logo button {
+  position: relative;
+  background-color: #aeadad;
+  color: white;
+  border: 0px;
   font-size: large;
   margin-left: 50%;
-  background-color: #aeadad;
-  border: 0px;
-  width: 80%;
-  padding-bottom: 2%;
-  color: white;
-  pointer-events: none;
+  margin-top: 0px;
+  width: 85%;
+  height: 35px;
 }
 
 .menu {
@@ -19,8 +20,9 @@ header {
 }
 
 .menu ul {
-  padding: 0;
   margin: 0;
+  padding-right: 10%;
+  padding-top: 2px;
 }
 
 .menu ul li {
@@ -96,9 +98,21 @@ header {
   }
 
   .logo button {
+    position: absolute;
     margin-left: 5%;
-    width: 40%;
-    padding-bottom: 1%;
+    width: 22%;
+    height: 33px;
+    margin-top: -0.5%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .logo button {
+    position: absolute;
+    margin-left: 5%;
+    width: 30%;
+    height: 30px;
+    margin-top: -0.5%;
   }
 }
 
@@ -108,7 +122,6 @@ Product Table
 p {
   position: absolute;
   margin-top: 20px;
-  margin-left: 21.5%;
   font-size: 21px;
   font-weight: 500;
 }
@@ -119,9 +132,9 @@ p {
   color: white;
   border: 0px;
   font-size: medium;
-  margin-left: 72%;
+  margin-left: 92.5%;
   margin-top: 20px;
-  width: 15%;
+  width: 22.5%;
   height: 32px;
   cursor: pointer;
 }

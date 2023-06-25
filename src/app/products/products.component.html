@@ -46,16 +46,16 @@
   </div>
 </header>
 
-<p class="text-secondary">Product Form</p>
-
-<div class="addButton">
-  <button (click)="openAddProductDialog()">+ Add</button>
-</div>
-
 <!-- Products Table -->
 <div class="container">
   <div class="row justify-content-center mt-3">
     <div class="col-md-8">
+      <p class="text-secondary">Product Form</p>
+
+      <div class="addButton">
+        <button (click)="openAddProductDialog()">+ Add</button>
+      </div>
+      <br />
       <table class="table-bordered text-center">
         <thead class="text-center">
           <tr class="border-0">
@@ -70,14 +70,24 @@
           <tr *ngFor="let arr of array">
             <td>{{ arr.Name }}</td>
             <td>{{ arr.Category }}</td>
-            <td>{{ arr.Price | number : "1.2-2" | replaceComma}}&euro;</td>
+            <td>{{ arr.Price | number : "1.2-2" | replaceComma }}&euro;</td>
             <td>{{ arr.Date | date : "dd.MM.yyyy" }}</td>
             <td>
               <button class="btn">
-                <span class="material-symbols-outlined" (click)="editProduct(arr)"> edit </span>
+                <span
+                  class="material-symbols-outlined"
+                  (click)="editProduct(arr)"
+                >
+                  edit
+                </span>
               </button>
               <button class="btn">
-                <span class="material-symbols-outlined" (click)="deleteProduct(arr)"> delete </span>
+                <span
+                  class="material-symbols-outlined"
+                  (click)="deleteProduct(arr)"
+                >
+                  delete
+                </span>
               </button>
             </td>
           </tr>

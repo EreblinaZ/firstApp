@@ -4,21 +4,23 @@ header {
 }
 
 .logo button {
+  position: relative;
+  background-color: #aeadad;
+  color: white;
+  border: 0px;
   font-size: large;
   margin-left: 50%;
-  background-color: #aeadad;
-  border: 0px;
-  width: 80%;
-  color: white;
-  padding-bottom: 2%;
-  pointer-events: none;
+  margin-top: 0px;
+  width: 85%;
+  height: 35px;
 }
 .menu {
   margin-top: 0px;
 }
 .menu ul {
-  padding: 0;
   margin: 0;
+  padding-right: 10%;
+  padding-top: 2px;
 }
 
 .menu ul li {
@@ -90,8 +92,21 @@ header {
   }
 
   .logo button {
+    position: absolute;
     margin-left: 5%;
-    width: 40%;
-    padding-bottom: 1%;
+    width: 22%;
+    height: 33px;
+    margin-top: -0.5%;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .logo button {
+    position: absolute;
+    margin-left: 5%;
+    width: 30%;
+    height: 30px;
+    margin-top: -0.5%;
   }
 }
