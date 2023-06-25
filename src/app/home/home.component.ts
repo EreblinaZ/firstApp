@@ -20,9 +20,4 @@ export class HomeComponent {
     // Redirect to the login page
     this.router.navigate(['/login']);
   }
-
-  /*  products() {
-    // Redirect to the products page
-    this.router.navigate(['/products']);
-  }*/
 }

@@ -28,6 +28,7 @@ export class AddProductDialogComponent {
     );
   }
 
+  //Save Button
   onSave(): void {
     if (this.validateFields()) {
       const productData = {
@@ -42,6 +43,7 @@ export class AddProductDialogComponent {
     }
   }
 
+  //Cancel Button
   onCancel(): void {
     this.dialogRef.close();
   }
