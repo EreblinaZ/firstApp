@@ -1,5 +1,11 @@
 mat-form-field {
   width: 100%;
+  margin: -2px;
+  overflow: hidden;
+}
+
+mat-dialog-content {
+  overflow: hidden;
 }
 
 .action {
@@ -9,8 +15,5 @@ mat-form-field {
 button {
   flex: 1;
   width: 500px;
-}
-
-.zero-border-radius .mat-form-field-outline {
   border-radius: 0;
 }

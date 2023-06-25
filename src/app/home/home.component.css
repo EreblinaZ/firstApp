@@ -13,6 +13,7 @@ header {
   margin-top: 0px;
   width: 85%;
   height: 35px;
+  pointer-events: none;
 }
 .menu {
   margin-top: 0px;
@@ -43,24 +44,25 @@ header {
   .menu {
     position: fixed;
     right: -280px;
-    top: 64;
+    top: 8.5%;
     width: 280px;
     height: 100%;
     background: #e0e0e0;
     transition: 0.4s ease-in-out;
   }
+
   .menu ul li {
     display: block;
     text-align: left;
     margin: 0;
     padding: 10px 0 10px 26px;
-    border-bottom: 1px solid #e0e0e0;
   }
+
   .menu_icon {
     display: inline-block;
     position: relative;
     right: 0;
-    top: 20 px;
+    top: 20;
   }
 
   .menu_icon span {
@@ -98,7 +100,6 @@ header {
     height: 33px;
     margin-top: -0.5%;
   }
-
 }
 
 @media only screen and (max-width: 768px) {

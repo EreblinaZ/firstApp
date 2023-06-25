@@ -24,10 +24,9 @@ export class AddProductDialogComponent {
       this.Category?.trim() !== '' &&
       this.Price !== null &&
       !isNaN(this.Price) &&
-      (this.Date instanceof Date)
+      this.Date instanceof Date
     );
   }
-  
 
   onSave(): void {
     if (this.validateFields()) {

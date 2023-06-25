@@ -3,7 +3,13 @@
 <div mat-dialog-content>
   <!--Product Name-->
   <mat-form-field appearance="outline">
-    <input matInput type="text" placeholder="Product Name*" [(ngModel)]="Name" required/>
+    <input
+      matInput
+      type="text"
+      placeholder="Product Name*"
+      [(ngModel)]="Name"
+      required
+    />
   </mat-form-field>
 
   <br />
@@ -21,14 +27,26 @@
 
   <!--Price-->
   <mat-form-field appearance="outline">
-    <input matInput type="number" placeholder="Price*" [(ngModel)]="Price" required/>
+    <input
+      matInput
+      type="number"
+      placeholder="Price*"
+      [(ngModel)]="Price"
+      required
+    />
   </mat-form-field>
 
   <br />
 
   <!--Date-->
   <mat-form-field appearance="outline">
-    <input matInput [matDatepicker]="picker" placeholder="Date*" [(ngModel)]="Date" required/>
+    <input
+      matInput
+      [matDatepicker]="picker"
+      placeholder="Date*"
+      [(ngModel)]="Date"
+      required
+    />
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
