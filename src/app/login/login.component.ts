@@ -24,7 +24,7 @@ export class LoginComponent {
       password: this.password,
     };
 
-    this.http.post('https://reqres.in/api/login', loginData).subscribe(
+    this.http.post('https://reqres.in/api/users', loginData).subscribe(
       (response: any) => {
         // Successful login
         this.snackBar.open('Login successful!', 'OK', { duration: 2000 });
