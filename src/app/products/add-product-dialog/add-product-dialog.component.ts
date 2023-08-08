@@ -16,7 +16,25 @@ export class AddProductDialogComponent {
   constructor(
     public dialogRef: MatDialogRef<AddProductDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
-  ) {}
+  ) {
+    console.log('Dialog Data:', data); // Check if the data is passed correctly
+
+    if (data.mode === 'edit') {
+      // Pre-fill the fields in edit mode
+      this.Name = data.product.Name;
+      this.Category = data.product.Category;
+      this.Price = data.product.Price;
+      this.Date = new Date(data.product.Date);
+
+      console.log(
+        'Pre-filled Values:',
+        this.Name,
+        this.Category,
+        this.Price,
+        this.Date
+      );
+    }
+  }
 
   private validateFields(): boolean {
     return (

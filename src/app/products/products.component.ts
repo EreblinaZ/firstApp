@@ -34,6 +34,7 @@ export class ProductsComponent {
     const dialogRef = this._dialog.open(AddProductDialogComponent, {
       height: '450px',
       width: '500px',
+      data: { mode: 'add' }, // Mode is set to 'add'
     });
 
     dialogRef.afterClosed().subscribe((productData: any) => {
