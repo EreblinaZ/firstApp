@@ -64,11 +64,16 @@ export class ProductsComponent {
     });
   }
 
-  //Delete Button
+  // Delete Button
   deleteProduct(product: any) {
     const index = this.array.indexOf(product);
     if (index !== -1) {
-      this.array.splice(index, 1);
+      const confirmation = window.confirm(
+        'Are you sure you want to delete this product?'
+      );
+      if (confirmation) {
+        this.array.splice(index, 1);
+      }
     }
   }
 
