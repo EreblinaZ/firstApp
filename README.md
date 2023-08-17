@@ -4,6 +4,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+## Informations 
+
+It is responsive. The structure is created using HTML, CSS, Bootstrap, TypeScript, and Angular Material.
+
 ## 1. Login page
 <img width="960" alt="1-login" src="https://github.com/EreblinaZ/firstApp/assets/36742404/200e7312-3b89-433f-a7c3-01770829ea37">
 
